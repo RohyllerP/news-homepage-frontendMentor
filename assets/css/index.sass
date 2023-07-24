@@ -1,0 +1,209 @@
+@font-face
+    font-family: 'Inter'
+    src: url('../fonts/Inter-VariableFont_slnt\,wght.ttf') format('truetype')
+@font-face
+    font-family: 'Inter-regular'
+    src: url('../fonts/static/Inter-Regular.ttf') format('truetype')
+
+@import 'variables'
+
+*
+    margin: 0px
+    padding: 0px
+    box-sizing: border-box
+
+#body
+    font-family: 'Inter', sans-serif     
+    .shadow-o
+        position: fixed
+        opacity: 0.4
+        width: 100%
+        height: 100vh
+        top: 0
+        left: 0
+        transition: all .3s ease-in
+        
+.p-all
+    margin: 0px 5em
+
+/* header normal */
+.header
+    padding: 20px
+    .header-nav
+        display: flex
+        justify-content: space-between
+        .header-title
+            font-family: 'Inter-regular', sans-serif
+            font-size: 35px
+            font-weight: 900
+        .header-ul
+            display: flex
+            align-items: center
+            a
+                text-decoration: none
+                color: $gray-blue
+                transition: all .3s ease-in
+            a:hover
+                color: $orange
+            li
+                padding-left: 30px
+                list-style-type: none
+        .menu-oculto
+            display: none
+
+    .n-o
+        display: none
+.main
+    margin: 20px 6.2em
+    .box-section-aside
+        display: flex
+        gap: 30px
+        .m-section
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            .m-section-1-img
+                height: 100%
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+            .m-section-1-p
+                margin-top: 20px
+                display: flex
+                gap: 40px
+                h1
+                    font-size: 38px
+                    font-weight: 800
+                p
+                    color: $gray-blue
+                div:nth-child(2)
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+                    line-height: 1.6em
+                    button
+                        padding: 10px 20px
+                        width: 160px
+                        text-transform: uppercase
+                        background-color: $red
+                        color: white
+                        border: 1px solid transparent
+                        font-weight: 600
+                        transition: all 0.3s ease-in
+                        cursor: pointer
+                    button:hover
+                        background-color: $dark-blue
+
+        .aside
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            color: white
+            background-color: $dark-blue
+            padding: 20px
+            gap: 30px
+            h3
+                font-size: 30px
+                color: $orange
+            p
+                font-weight: 100
+                padding-top: 8px
+                padding-bottom: 25px
+            a
+                text-decoration: none
+                color: white
+                transition: all 0.3s ease-in
+            a:hover
+                color: $orange
+            .aside-border
+                border-bottom: 1px solid $gray-blue
+
+    .m-section-2
+        margin-top: 30px
+        display: flex
+        gap: 20px
+        > div
+            display: flex
+            img
+                width: 100px
+                height: 100%
+            > div
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+        h5
+            font-size: 30px
+            color: $gray
+            padding-left: 20px
+        p
+            padding-left: 20px
+        a
+            color: black
+            text-decoration: none
+            transition: all 0.3s ease-in
+        a:hover
+            color: $red
+        .p-big
+            font-size: 19px
+            padding-bottom: 10px
+            font-weight: 600
+            padding-top: 10px
+        .p-small
+            color: $gray-blue
+            font-size: 14px
+            line-height: 1.6em
+
+$layout-table: 860px
+@media (max-width: $layout-table)
+    .header
+        .header-nav
+            align-items: center
+            .header-ul
+                display: none
+            .menu-oculto
+                display: block
+                img
+                    width: 30px
+                    height: 20px
+        .nav-oculto
+            position: fixed
+            right: 0
+            top: 0
+            width: 60%
+            height: 100vh
+            padding: 20px
+            background-color: blue
+            align-items: center
+            z-index: 9999999999999
+            img 
+                position: absolute 
+                right: 30px
+                top: 30px
+            .ul-oculto
+                padding-left: 10px
+                li 
+                    list-style-type: none
+                    padding: 20px 0px
+                a 
+                    color: black
+                    text-decoration: none
+        .n-c
+            display: flex
+        .n-o
+            display: none
+    .main
+        .box-section-aside
+            display: block
+            .m-section
+                .m-section-1-p
+                    display: block
+                    p
+                        margin-top: 20px
+                    button 
+                        margin-top: 20px
+                        margin-bottom: 20px
+        .m-section-2
+            display: block
+            > div 
+                margin-bottom: 25px
